@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'ui(/:action)', controller: 'ui'
   root "promotions#index"
   resources :agents, only: :show
+  get '/search', to: "promotions#search", as: "search"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

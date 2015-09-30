@@ -10,7 +10,7 @@
     #main-nav-collapse.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
         %li.navbar-form
-          =bootstrap_form_tag url: "#", layout: :inline, method: 'get' do |f|
+          =bootstrap_form_tag url: "/search", layout: :inline, method: 'get' do |f|
             =f.text_field :search, icon: 'search', skip_label: true
             =f.submit "Search", class: 'btn btn-success'
 
