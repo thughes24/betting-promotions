@@ -1,0 +1,16 @@
+%nav.navbar.navbar-inverse
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#main-nav-collapse" aria-expanded="false")
+        %span.sr-only Toggle Navigation
+        -3.times do
+          %span.icon-bar
+      =link_to "BettingPromotions", root_path, class: "navbar-brand"
+
+    #main-nav-collapse.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li.navbar-form
+          =bootstrap_form_tag url: "#", layout: :inline, method: 'get' do |f|
+            =f.text_field :search, icon: 'search', skip_label: true
+            =f.submit "Search", class: 'btn btn-success'
+

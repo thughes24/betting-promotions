@@ -1,9 +1,13 @@
 !!! 5
 %html(lang="en-US")
   %head
-    %title RailsTemplate
+    %title BettingPromotions
     = stylesheet_link_tag    'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    = yield
+    =render '/shared/header'
+    .container-fluid
+      .row.text-center
+        .col-md-12
+          = yield

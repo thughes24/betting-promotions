@@ -1,0 +1,26 @@
+%br
+.row
+  .col-md-12
+    %br
+    %h3 All Promotions
+    %br
+.row
+  .col-md-12
+    %h2
+      -@agent.each do |agent|
+        =link_to agent.name, agent_path(agent), class: agent.name.downcase
+        | 
+%br
+%br
+.row
+  .col-md-12
+    .col-md-10.col-md-offset-1
+      -@promotions.each do |promotion|
+        .promo-box
+          %div{class: "#{promotion.agent.name.downcase}"}
+            .promo-header
+              %h2
+                =promotion.title
+            .promo-info
+              %p.lead
+                =promotion.info

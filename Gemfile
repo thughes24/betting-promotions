@@ -9,10 +9,11 @@ gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'haml-rails'
 gem 'bootstrap-sass'
-gem 'bootstrap-form'
+gem 'bootstrap_form'
 gem 'bcrypt'
 gem 'figaro'
 gem 'sidekiq'
+gem 'nokogiri'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

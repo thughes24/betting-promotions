@@ -1,0 +1,56 @@
+$sportsbet: #0DA2D7;
+$ladbrokes: #D32123;
+$ubet: #53DA3F;
+$crownbet: #6F2B6C;
+$williamhill: #1D5780;
+$luxbet: #E0E0E0;
+
+.promo-box {
+  border:1px dotted gray;
+  width:100%;
+  float:left;
+  margin:10px !important;
+}
+.promo-header {
+  font-weight:bold;
+  border-bottom:1px dotted gray;
+}
+.sportsbet h2 {
+  color: $sportsbet;
+}
+.ladbrokes h2 {
+  color: $ladbrokes;
+}
+.ubet h2 {
+  color: $ubet;
+}
+.crownbet h2 {
+  color: $crownbet;
+}
+.william h2 {
+  color: $williamhill;
+}
+.luxbet h2 {
+  color: $luxbet;
+}
+a.sportsbet {
+  color: $sportsbet;
+}
+a.ladbrokes {
+  color: $ladbrokes;
+}
+a.ubet {
+  color: $ubet;
+}
+a.crownbet {
+  color: $crownbet;
+}
+a.william {
+  color: $williamhill;
+}
+a.luxbet {
+  color: $luxbet;
+}
+
+
+
