@@ -11,3 +11,4 @@ Agent.create(name: "Ubet", url: "https://ubet.com/promotions", title_select: ".p
 Agent.create(name: "Crownbet", url: "https://crownbet.com.au/promotions", title_select: ".promotion-item .title", info_select: "#middle-container .hidden-xs")
 Agent.create(name: "William Hill", url: "https://www.williamhill.com.au/Home/GetPromoOffers", title_select: "h4 a", info_select: ".promo-content")
 Agent.create(name: "Luxbet", url: "https://www.luxbet.com/staticcontent/promotions.html", title_select: ".boxHeader", info_select: ".boxContent")
+Agent.create(name: "Unibet", url: "https://www.unibet.com.au/promotions", title_select: ".headline", info_select: ".article")

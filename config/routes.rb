@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   get 'ui(/:action)', controller: 'ui'
   root "promotions#index"
   resources :agents, only: :show

@@ -1,0 +1,11 @@
+-@promotions.each do |promotion|
+  .promo-box
+    %div{class: "#{promotion.agent.name.downcase}"}
+      .promo-header
+        %h2
+          =promotion.title
+          -if promotion.created_at > 24.hours.ago
+            .badge New
+      .promo-info
+        %p.lead
+          =promotion.info

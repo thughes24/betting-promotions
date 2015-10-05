@@ -3,7 +3,7 @@ $ladbrokes: #D32123;
 $ubet: #53DA3F;
 $crownbet: #6F2B6C;
 $williamhill: #1D5780;
-$luxbet: #E0E0E0;
+$luxbet: #858585;
 
 .promo-box {
   border:1px dotted gray;
@@ -32,6 +32,12 @@ $luxbet: #E0E0E0;
 }
 .luxbet h2 {
   color: $luxbet;
+}
+.unibet h2 {
+  color: #247423;
+}
+a.unibet {
+  color: #247423;
 }
 a.sportsbet {
   color: $sportsbet;

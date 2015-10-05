@@ -40,15 +40,33 @@ task :get_promotions => :environment do
   end
 end
 
-task :remove_blank_promotions => :environment do
-  Promotion.where(info: nil).delete_all
-end
-
 task :clear_promotions => :environment do
   Promotion.delete_all
 end
+task :remove_blank_promotions => :environment do
+  Promotion.where("title IS NULL OR info IS NULL").each do |promo|
+    promo.delete
+  end
+end
 
-task :getpromos => [:clear_promotions, :get_promotions, :remove_blank_promotions]
+task :delete_ended_promotions => :environment do
+  old_promos = Promotion.where("created_at < ?", 2.minutes.ago)
+  ended_promos = old_promos.select { |promo| Promotion.where("title = ?", promo.title).size == 1}
+  ended_promos.each do |promo|
+    promo.delete
+  end
+end
+
+task :delete_duplicate_promotions => :environment do
+  new_promos = Promotion.where("created_at > ?", 2.minutes.ago)
+  duplicates = new_promos.select { |promo| Promotion.where("title = ?", promo.title).size > 1 }
+  duplicates.each do |promo|
+    promo.delete
+  end
+end
+
+
+task :getpromos => [:get_promotions, :delete_ended_promotions, :delete_duplicate_promotions, :remove_blank_promotions]
 
 #@processed_data.data.each do |agency_promo| ##CONTINUE HERE, SCRAPE WORKS, NOW PUT INTO DATABASE SOMEHOW
 #  agent_name = ageny_promo.keys[0]

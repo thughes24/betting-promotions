@@ -13,12 +13,4 @@
 .row
   .col-md-12
     .col-md-10.col-md-offset-1
-      -@promotions.each do |promotion|
-        .promo-box
-          %div{class: "#{promotion.agent.name.downcase}"}
-            .promo-header
-              %h2
-                =promotion.title
-            .promo-info
-              %p.lead
-                =promotion.info
+      =render '/shared/promotions'
